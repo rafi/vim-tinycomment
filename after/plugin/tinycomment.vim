@@ -28,6 +28,10 @@ augroup tinycomment
 	autocmd FileType mail,mkd                  setlocal commentstring=>\ %s
 	autocmd FileType man                       setlocal commentstring=.\"%s
 	autocmd FileType vim,st,vimperator         setlocal commentstring=\"%s
+
+	autocmd FileType python
+		\ setlocal commentstring=#%s | let b:commentblockstring = '"""%s"""'
+
 	autocmd FileType lisp,scheme
 		\ setlocal commentstring=;%s | let b:commentblockstring = '#|%s|#'
 
@@ -92,7 +96,7 @@ augroup tinycomment
 		\ebuild,ecd,eclass,elmfilt,expect,exports,fancy,fgl,fstab,fvwm,gdb,gentoo,
 		\gitcommit,gitrebase,gnuplot,gtkrc,hb,hog,hxml,ia64,icon,inittab,
 		\jproperties,ldif,lilo,lout,lss,lynx,maple,mirah,make,mush,nginx,nimrod,
-		\nsis,ntp,ooc,ora,pcap,perl,pine,po,ps1,psf,ptcap,puppet,python,radiance,
+		\nsis,ntp,ooc,ora,pcap,perl,pine,po,ps1,psf,ptcap,puppet,radiance,
 		\ratpoison,r,remind,resolv,rib,robots,rspec,ruby,scons,sed,sh,sm,snnsnet,
 		\snnspat,snnsres,spec,ssh,squid,tcl,tidy,tli,tmux,tsscl,vgrindefs,vrml,
 		\wget,wml,xmath
